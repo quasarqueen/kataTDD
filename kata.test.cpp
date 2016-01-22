@@ -5,10 +5,6 @@
 
 using namespace std;
 
-
-TEST_CASE("needs to convert a RN to Arabic N","[RN2Arab]"){
-    REQUIRE( RN2Arab(I)== 1);
-}
 string RN2Arab (string roman) {
     int arabic=0;
     const int length = roman.length();
@@ -37,5 +33,10 @@ string RN2Arab (string roman) {
 }
 
 TEST_CASE("needs to convert a RN to Arabic N","[RN2Arab]"){
-    REQUIRE( RN2Arab(I)== 1);
+    CHECK( RN2Arab("I")== "1");
+    REQUIRE( RN2Arab("IV")== "4");
+    REQUIRE( RN2Arab("IX")== "9");
+    REQUIRE( RN2Arab("XL")== "40");
+    REQUIRE( RN2Arab("XC")== "90");
 }
+
