@@ -40,3 +40,6 @@ TEST_CASE("needs to convert a RN to Arabic N","[RN2Arab]"){
     REQUIRE( RN2Arab("XC")== "90");
 }
 
+TEST_CASE("needs to convert an arabic number to RN","[Arab2RN]"){
+    CHECK( Arab2RN("1")== "I");
+}
